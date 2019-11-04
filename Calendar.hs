@@ -1,6 +1,15 @@
+module Calendar where
+
 import Data.List (zip4)
 import System.IO
 
+{- Tento modul obsahuje:
+	# funkcie pre generovanie kalendara
+
+	# funkcie pre zobrazovanie casti kalendara
+
+	# funkcie pre skladanie jednotlivych casti kalendara do jedneho obrazka
+-}
 main = do
     putStrLn (calendar 2019)
 
@@ -9,6 +18,8 @@ mnames   = ["JANUÁR","FEBRUÁR","MAREC","APRÍL",
             "MÁJ","JÚN","JÚL","AUGUST",
             "SEPTEMBER","OKTÓBER","NOVEMBER","DECEMBER"]
 
+
+-- Skladanie obrazka --------------------------------------------
 height p = length p
 width p  = length (head p)
 
@@ -30,6 +41,9 @@ lframe (m,n) p = (p `beside` empty (h, n-w))
 
 display = unlines
 
+
+-- Zobrazovanie ------------------------------------------------
+
 calendar = display . block 3 . map picture . months
 
 picture (mn, yr, fd, ml) = (title mn yr) `above` (table fd ml)
@@ -46,6 +60,8 @@ rjustify n s
     | (length s) < n  = (replicate (n - (length s)) ' ' ++ s)
     | otherwise = s
 
+
+-- Skladanie struktury kalendara --------------------------------------
 months yr = zip4 mnames (replicate 12 yr) (fstdays yr) (mlengths yr)
 
 mlengths yr = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -58,4 +74,11 @@ leap yr
     | otherwise = (yr `mod` 4 == 0)
 
 jan1 yr = (yr + (yr-1) `div` 4 - (yr-1) `div` 100 + (yr-1) `div` 400) `mod` 7
-fstdays yr = take 12 (map (mod 7) (scanl (+) (jan1 yr) (mlengths yr)))
+fstdays yr = take 12 (map (`mod` 7) (scanl (+) (jan1 yr) (mlengths yr)))
+
+
+-- -------------------------------------------------------------------
+
+-- ===================================================================
+-- End of module
+-- ===================================================================
