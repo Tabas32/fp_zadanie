@@ -1,0 +1,11 @@
+digraph {
+"Merge remote-tracking branch 'origin/master'" -> "Merge branch 'extension'";
+"Merge remote-tracking branch 'origin/master'" -> "changed text on buttons";
+"changed text on buttons" -> "added basic README file";
+"Merge branch 'extension'" -> "added footer";
+"Merge branch 'extension'" -> "extended page";
+"extended page" -> "added basic README file";
+"added footer" -> "added basic README file";
+"added basic README file" -> "modified button and heading styles";
+"modified button and heading styles" -> "basic page template with bootstrap";
+}
