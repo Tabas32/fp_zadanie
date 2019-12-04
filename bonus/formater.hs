@@ -1,17 +1,21 @@
-import Json
+import Json2
+import Scanner
 import Data.Maybe
 import System.IO
 
 main = do
-    log <- parseFile "example.json" jsonValue
+    input <- readFile "example.json"
+    let log = jArray (tokenize input)
+    --log <- parseFile "example.json" jsonValue
     --putStrLn $ show $ getJsonArray $ fromJust log
     --putStrLn $ show $ getId $ head $ getJsonArray $ fromJust log
     --putStrLn $ show $ getById "c8948c063943d511a56d9f79a7ad3de90a81468f" (fromJust log)
     --putStrLn $ show $ getRoots $ fromJust log
     --putStrLn $ show $ getMessage $ head $ getJsonArray $ fromJust log
     --putStrLn $ show $ drawLinesFromNode (fromJust log) (head $ getJsonArray $ fromJust log)
-    putStrLn $ show $ drawDigraph (fromJust log)
-    writeFile "log.gv" (drawDigraph (fromJust log))
+    --putStrLn $ show $ drawDigraph (fromJust log)
+    --putStrLn $ show $ (tokenize input)
+    writeFile "log2.gv" (drawDigraph (fromJust $ fst log))
 
 
 -- F-cie na pracu s JsonValue ----------------------------------------

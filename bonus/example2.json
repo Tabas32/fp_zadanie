@@ -1,0 +1,31 @@
+[{
+    "id": "c8948c063943d511a56d9f79a7ad3de90a81468f",
+    "short_id": "c8948c06",
+    "title": "Merge remote-tracking branch 'origin/master'",
+    "parent_ids": ["86484ecd2147d4449d88f948f9179e225659b37e", "1b71a6d3530ed918ba7d7fef64d51404adb020d4"],
+    "message": "Merge remote-tracking branch 'origin/master'",
+    "author_name": "Student",
+    "author_email": "student@student.tuke.sk",
+    "committer_name": "Student",
+    "committer_email": "student@student.tuke.sk"
+}, {
+    "id": "1b71a6d3530ed918ba7d7fef64d51404adb020d4",
+    "short_id": "1b71a6d3",
+    "title": "changed text on buttons",
+    "parent_ids": ["2e2896cb0b3e1d5de1cfc74ce475d86d05e2e455"],
+    "message": "changed text on buttons",
+    "author_name": "Student",
+    "author_email": "student@student.tuke.sk",
+    "committer_name": "Student",
+    "committer_email": "student@student.tuke.sk"
+}, {
+    "id": "86484ecd2147d4449d88f948f9179e225659b37e",
+    "short_id": "86484ecd",
+    "title": "Merge branch 'extension'",
+    "parent_ids": ["e862adda708f91550e5ebc84093565d7c50c7224", "fce90c03bc417fe5e99e219f15d1822026524127"],
+    "message": "Merge branch 'extension'",
+    "author_name": "Student",
+    "author_email": "student@student.tuke.sk",
+    "committer_name": "Student",
+    "committer_email": "student@student.tuke.sk"
+}]
