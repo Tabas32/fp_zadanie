@@ -15,7 +15,7 @@ main = do
     --putStrLn $ show $ drawLinesFromNode (fromJust log) (head $ getJsonArray $ fromJust log)
     --putStrLn $ show $ drawDigraph (fromJust log)
     --putStrLn $ show $ (tokenize input)
-    writeFile "log2.gv" (drawDigraph (fromJust $ fst log))
+    writeFile "log.gv" (drawDigraph (fromJust $ fst log))
 
 
 -- F-cie na pracu s JsonValue ----------------------------------------

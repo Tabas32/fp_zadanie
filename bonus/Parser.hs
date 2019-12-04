@@ -112,7 +112,7 @@ multiple p =
               Just pR  ->
                  case multiple p pRest of
                     (Just results, rest)  -> (Just (pR:results), rest)
-                    (Nothing, rest)       -> (Nothing, rest) -- should never occur
+                    (Nothing, rest)       -> (Nothing, rest) 
 
 
 multipleAs :: Parser [String]
@@ -135,7 +135,7 @@ multipleSep p sep =
               Just pR  ->
                  case (sep `andThen` \x -> multipleSep p sep) pRest of
                     (Just results, rest)  -> (Just (pR:results), rest)
-                    (Nothing, rest)       -> (Just [pR], rest) -- should never occur
+                    (Nothing, rest)       -> (Just [pR], rest)
 
 -- or ------------
 

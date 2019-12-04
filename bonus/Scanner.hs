@@ -27,10 +27,6 @@ nextWordAndRest text = nextWordAndRest' (skipWhiteSpaces text) ""
 
 -- tokenize  -------------------------------------------------------------------
 
-{--
-  This is a function to split a string by either spaces or '(' or ')'
-  whereas parantheses will become tokens
---}
 tokenize :: String -> [String]
 tokenize text =
    case skipWhiteSpaces text of

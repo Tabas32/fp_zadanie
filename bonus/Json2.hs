@@ -2,12 +2,9 @@ module Json2 where
 
 import Data.Char
 import Data.List
-import Debug.Trace
 
 import Scanner
 import Parser
-
--- Data type definition LExpr --------------------------------------------------
 
 data JsonValue
   = JsonNull
